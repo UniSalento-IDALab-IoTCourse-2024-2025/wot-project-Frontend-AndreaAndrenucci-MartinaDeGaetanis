@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.sansation {
+    font-family: "Sansation", sans-serif;
+    font-style: normal;
+}
+
+.form-field {
+    font-family: inherit;
+    width: 100%;
+    outline: 0;
+    font-size: 1.3rem;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+
+.otp-input {
+  width: 3rem;
+  height: 4rem; 
+  text-align: center;
+  font-size: 1.5rem;
+  border-width: 3px;
+  border-color: #1A7358;
+  border-radius: 0.75rem;
+  outline: none;
+  transition: transform 300ms ease;
+}
+
+.otp-input:focus {
+  border-color: #1A7358;
+  box-shadow: 0 0 0 2px #1A7358;
+}
+
+.otp-input:hover {
+  transform: scale(1.10);
+  border-color: #1A7358;
+  box-shadow: 0 0 0 2px #1A7358;
+}
+
+.card-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.25rem;
+  color: #6b7280;
+  background-color: #ffffff;
+  border: 2px solid #e5e7eb;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.card-label:hover {
+  color: #4b5563;
+  background-color: #f9fafb;
+}
+
+input[type="radio"]:checked + .card-label {
+  border-color: rgb(19, 95, 72);
+  background-color: #eff6ff;
+  color: #135F48;
+  box-shadow: 0 4px 6px rgba(19, 95, 72, 0.4);
+}
+
+.settings-profile-button {
+  background-color: #135F48;
+  color:  #eff6ff;
+  font-weight: bold;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 0.7rem;
+  border-width: 2px;
+  border-color: #135F48;
+  transition: background-color 0.2s ease;
+  width: 200px;
+}
+
+.settings-profile-button:hover {
+  background-color:#eff6ff;
+  color: #135F48;
+}
+
+.delete-profile-button {
+  background-color: #b03030;
+  color:  #eff6ff;
+  font-weight: bold;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 0.7rem;
+  border-width: 2px;
+  border-color: #b03030;
+  transition: background-color 0.2s ease;
+  width: 200px;
+}
+
+.delete-profile-button:hover {
+  background-color:  #b030304a;
+  color:#b03030;
+}
+
+/* Per eliminare l'occhio nativo dai campi password */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-webkit-credentials-auto-fill-button {
+    display: none !important;
+}
+
+input[type="password"]::-webkit-outer-spin-button,
+input[type="password"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+@keyframes loading {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.animate-bar {
+  animation: loading 1.5s linear infinite;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.logo-shadow {
+  filter: drop-shadow(3px 3px 10px rgba(0, 0, 0, 0.8));
+}
